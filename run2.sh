@@ -1,1 +1,1 @@
-mpirun -np 4 ./zad2
+mpirun -np 4 ./zad2 $1

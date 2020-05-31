@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <mpi.h>
 #include <math.h>
 
@@ -29,8 +30,7 @@ int main(int argc, char *argv[])
     int N, n, r; //N ilość iteracji, n ilość iteracji dla pojedynczego procesu, r reszta
     if(!myrank)
     {
-        printf("Podaj ilość iteracji:\n");
-        scanf("%d",&N);
+        N = atoi(argv[1]);
         n = N/npes;
         r = N - n * npes;
     }
